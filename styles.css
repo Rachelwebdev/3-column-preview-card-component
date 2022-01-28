@@ -64,7 +64,7 @@ h6 {
 .container {
   display: flex;
   border: 2px solid transparent;
-  height: 50%;
+  /* height: 50%; */
   width: 50%;
   overflow: hidden;
   border-radius: 10px;
