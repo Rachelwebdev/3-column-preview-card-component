@@ -1,133 +1,139 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
-
-*,
-*::before,
-*::after {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
   box-sizing: border-box;
 }
 * {
   margin: 0;
 }
-html,
-body {
+html, body {
   height: 100%;
 }
 body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  background-color: hsl(0, 0%, 95%);
-  font-size: 15px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  -webkit-font-smoothing: antialiased;
+  background-color: hsl(233, 47%, 7%);
+  padding: 100px;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+}
+
+img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
-  margin-bottom: 30px;
 }
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
   font: inherit;
 }
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-#root,
-#__next {
+#root, #__next {
   isolation: isolate;
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+h1{
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: Inter;
+  margin-bottom: 30px;
 }
 
 .container {
   display: flex;
-  border: 2px solid transparent;
-  /* height: 50%; */
-  width: 50%;
-  overflow: hidden;
-  border-radius: 10px;
+  flex-direction: row;
+  border-radius: 5px;
+  width: 900px;
+  flex-wrap: wrap;
 }
 
-.col-1 {
-  background-color: hsl(31, 77%, 52%);
-  padding: 30px;
-}
-
-.col-2 {
-  background-color: hsl(184, 100%, 22%);
-  padding: 30px;
-}
-
-.col-3 {
-  background-color: hsl(179, 100%, 13%);
-  padding: 30px;
-}
-
-h1 {
-  font-family: "Big Shoulders Display";
-  color: hsl(0, 0%, 95%);
-}
-
-p {
-  font-family: "Lexend Deca";
-  color: hsla(0, 0%, 100%, 0.75);
-  font-size: 15px;
-}
-
-.btn-1 {
-  margin-top: 30px;
-  color: hsl(31, 77%, 52%);
-  background-color: hsl(0, 0%, 95%);
-}
-
-.btn-2 {
-  margin-top: 30px;
-  color: hsl(184, 100%, 22%);
-  background-color: hsl(0, 0%, 95%);
-}
-
-.btn-3 {
-  margin-top: 30px;
-  color: hsl(179, 100%, 13%);
-  background-color: hsl(0, 0%, 95%);
-}
-
-.btn {
-  font-family: "Lexend Deca";
-  font-size: 12px;
-  padding: 10px;
-  border-radius: 20px;
-  width: 120px;
-  border: transparent;
-}
-
-.preview {
+.description {
   display: flex;
   flex-direction: column;
+  width: 50%;
+  padding: 45px;
+  background-color: hsl(244, 38%, 16%);
 }
 
-.suv-text {
-  margin-bottom: 20px;
+.stats {
+  justify-content: space-between;
+  color: hsla(0, 0%, 100%, 0.75);
+  display: flex;
+  font-family: inter;
 }
+
+h4 {
+  margin-bottom: 6px;
+}
+
+.summary {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: Lexend Deca;
+  margin-bottom: 70px;
+}
+
+.template {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 10px;
+}
+
+.insights{
+  color: hsl(277, 64%, 61%);
+}
+
+.image {
+  position: relative;
+  width: 50%;
+}
+
+img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: hsl(277, 64%, 61%, 0.7);
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .description, .image {
+    width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 80px;
+  }
+
+  .margin {
+    margin-bottom: 20px;
+  }
+
+  .summary {
+    margin-bottom: 50px;
+  }
+}
+
